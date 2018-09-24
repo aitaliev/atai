@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:200,400');
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.grid {
+	display: grid;
+}
+
+.main-section {
+	background-image: url(../images/Pattern-bg.png);
+	background: cover no-repeat;
+	height: 100vh;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 1;
+}
+
+.title {
+	text-align: center;
+	display: block;
+}
+
+img {
+	height: 480px;
+	position: absolute;
+}
+
+h1 {
+	color: #fff;
+	z-index: 2;
+	position: relative;
+	padding-top: 55px;
+	font-weight: 200;
+	font-family: 'Exo 2';
+	margin-bottom: 25px;
+}
+
+.main-box {
+	width: 80%;
+	height: 480px;
+	position: relative;
+	margin: 0 auto; 
+	z-index: 2;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 97px;
+		box-sizing: border-box;
+}
+
+.general {
+	box-sizing: border-box;
+	grid-gap: 20px;
+	background: #ddd;
+	position: relative;
+	border-radius: 12px;
+	-webkit-clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 14%);
+clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+
+}
+
+.text-box {
+	padding: 25px;
+}
