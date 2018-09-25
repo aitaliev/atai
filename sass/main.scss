@@ -1,0 +1,191 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+.grid {
+ display: grid;
+}
+.main-section {
+ background-image: url(../images/pattern-bg.png);
+ background: cover no-repeat;
+ height: 100vh;
+ position: relative;
+}
+
+.overlay {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0,0,0,0.4);
+ z-index: 0;
+}
+
+.title {
+ width: 100%;
+ text-align: center;
+ color: white;
+ margin-bottom: 80px;
+}
+
+h1 {
+ padding-top: 60px;
+ z-index: 1;
+ position: relative;
+}
+.main-box {
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-column-gap: 100px;
+ grid-template-rows: 1fr;
+ align-items: center;
+ align-self: center;
+ padding-left: 100px;
+ padding-right: 100px;
+}
+
+.general {
+ width: 320px;
+ height: 480px;
+ position: relative;
+}
+
+
+.clip-svg {
+  width: 0;
+  height: 0;
+}
+
+.clip-caption {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.clip-each {
+  display: block;
+  position: relative;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  -webkit-clip-path: url("#hexagon-clip");
+  clip-path: url("#hexagon-clip");
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin: 0 auto;
+}
+
+a.clip-each:hover {
+  background: #d91667;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+
+
+.clip-border { 
+  background-color: #1698d9;
+  width: 320px;
+  height: 480px;
+  // margin-top: 7px;
+  color: #222;
+}
+
+.clip-border::after {
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  right: 1%;
+  bottom: 1%;
+  margin: 0 auto;
+  background: white;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  -webkit-clip-path: url("#hexagon-clip");
+  clip-path: url("#hexagon-clip");
+  z-index: -1;
+}
+
+.clip-tagline {
+  display: block;
+  color: #758C9B;
+  text-decoration: none;
+  text-align: center;
+}
+
+// .options {
+//     display: table;
+//     border-collapse: collapse;
+//     width: 100%;
+//     height: inherit;
+//     table-layout: fixed; // equal .option width
+//     >.option {
+//         position: relative;
+//         overflow: hidden;
+//         display: table-cell;
+//         vertical-align: middle;
+//         transform: translate3d(0, 0, 0);
+//         transition-property: background;
+//         transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+//         transition-duration: .3s;
+//         border: 1px solid rgba(255, 255, 255, .07);
+//         >input[type="radio"],
+//         >input[type="checkbox"] {
+//             position: absolute;
+//             display: none;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             &:hover,
+//             &:checked {
+//                 cursor: pointer!important;
+//                 &~.option-content {
+//                     width: 100%;
+//                     transform: scale(1.3, 1.3);
+//                 }
+//             }
+//             &:checked {
+//                 &~.on-checked {
+//                     opacity: 1;
+//                     box-shadow: inset 0px 0px 3em -1.2em rgba(0,0,0,.5);
+//                 }
+//             }
+//             &:active {
+//                 ~.option-content {
+//                     transform: scale(1.15, 1.15);
+//                 }
+//             }
+//         }
+//         >.option-content {
+//             position: relative;
+//             z-index: 1;
+//             cursor: pointer!important;
+//             height: inherit;
+//             transform: translate3d(0, 0, 0);
+//             transition-property: transform, background, padding, transform;
+//             transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+//             transition-duration: .3s;
+//         }
+//         >.on-checked {
+//             position: absolute;
+//             z-index: 0;
+//             left: 0;
+//             top: 0;
+//             height: 100%;
+//             width: 100%;
+//             opacity: 0;
+//             pointer-events: none;
+//             transition-property: opacity;
+//             transition-duration: .5s;
+//             background-color: rgba(0, 0, 0, .1);
+//         }
+//     }
+// }
